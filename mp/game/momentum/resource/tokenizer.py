@@ -8,7 +8,7 @@ outfile = 'momentum_english.txt'
 
 try:
     if not os.path.exists(infile):
-        raise IOError(infile + ' was not found in this directory')
+        raise IOError(f'{infile} was not found in this directory')
     print('Trying to convert momentum_english_ref (UTF-8) to momentum_english (UCS-2 LE BOM)')
     with codecs.open(infile, 'r', encoding='utf-8') as ref_file:
         with codecs.open(outfile, 'w', 'utf_16_le') as target_file:
